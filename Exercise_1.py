@@ -172,3 +172,5 @@ while number_user != 0:
         x = menu[number_user]
         x()
         input('Нажмите Enter, чтобы продолжить ')
+
+# Для создания пулл реквеста
