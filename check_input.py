@@ -35,8 +35,13 @@ def user(user_input, name=False):
 
 
 def input_(*args):
-    if (user(el) is int for el in args):
-        return list(map(int, args))
+    try:
+        if (user(el) is int for el in args):
+            return list(map(int, args))
+    except ValueError:
+        return False
+    except TypeError:
+        return False
 
 
 def gen_list(len_arr):

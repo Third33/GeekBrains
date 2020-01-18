@@ -6,15 +6,17 @@ from sys import argv
 import check_input as check
 
 
-name, param_1, param_2, param_3 = argv
+name, wrk_time, cash_hour, bonus = argv
 
 
 def exe_1(wrk_time, cash_hour, bonus):
-    wrk_time, cash_hour, bonus = check.input_(wrk_time, cash_hour, bonus)
-    return wrk_time * cash_hour + bonus
+    if check.input_(wrk_time, cash_hour, bonus):
+        wrk_time, cash_hour, bonus = check.input_(wrk_time, cash_hour, bonus)
+        print(f'Your money is: {wrk_time * cash_hour + bonus}$')
+    else:
+        print('Only numbers')
 
 
-print(f'Your money is: {exe_1(param_1, param_2, param_3)}$')
-
+exe_1(wrk_time, cash_hour, bonus)
 
 # Command line: python3 Exercise_4.py 5 5 5
