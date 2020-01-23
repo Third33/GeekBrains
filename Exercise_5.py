@@ -41,8 +41,7 @@ def exe_4():
         my_file = open('text_4_new.txt', 'w+')
         for i, line in enumerate(f):
             str_line = line.split()
-            str_line[0] = numbers[i]
-            my_file.writelines(str(str_line) + '\n')
+            my_file.write(line.replace(str_line[0], numbers[i]))
         my_file.close()
     with open('text_4_new.txt', 'r') as ft:
         print(ft.read())
@@ -83,14 +82,16 @@ def exe_6():
 
 
 def exe_7():
-    my_list = {}
+    my_list = []
+    frm_list = {}
 
     with open('text_7.txt', 'r') as f:
         for line in f:
             name, form, cash, costs = line.split()
-            my_list[name] = int(cash) - int(costs)
-        a_cash = [i for i in my_list.values() if i > 0]
-        my_list['Average'] = int(sum(a_cash) / len(a_cash))
+            frm_list[name] = int(cash) - int(costs)
+        a_cash = [i for i in frm_list.values() if i > 0]
+        avr_list = {'Average': int(sum(a_cash) / len(a_cash))}
+        my_list.append(frm_list), my_list.append(avr_list)
 
     with open('text_7.json', 'w') as fl:
         json.dump(my_list, fl, indent=4, ensure_ascii=False)
