@@ -3,8 +3,7 @@ from random import randint
 
 def user(user_input, name=False):
     if user_input == 'q':
-        print('Program will be terminated, press Enter')
-        input()
+        print('Program will be terminated')
         exit(0)
     else:
         try:
