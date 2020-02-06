@@ -9,7 +9,7 @@
 # сообщение и завершать скрипт.
 from itertools import cycle
 from time import sleep
-import check_input
+from Exercise import check_input
 
 
 class TrafficLight:

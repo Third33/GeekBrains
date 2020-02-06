@@ -1,6 +1,6 @@
 from functools import reduce
 from itertools import cycle, count
-import check_input as check
+from Exercise import check_input as check
 
 list_exe = {1: '',
             2: '\n2. Представлен список чисел. Необходимо вывести элементы исходного списка, значения которых больше '

@@ -1,4 +1,4 @@
-import check_input
+from Exercise import check_input
 import re
 import json
 

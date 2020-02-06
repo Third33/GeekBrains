@@ -6,7 +6,7 @@
 # матрица. Подсказка: сложение элементов матриц выполнять поэлементно — первый элемент первой строки первой матрицы
 # складываем с первым элементом первой строки второй матрицы и т.д.
 from abc import ABC, abstractmethod
-import check_input
+from Exercise import check_input
 
 
 class Matrix:

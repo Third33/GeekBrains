@@ -3,8 +3,7 @@
 # Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 
 from sys import argv
-import check_input as check
-
+from Exercise import check_input as check
 
 name, wrk_time, cash_hour, bonus = argv
 
