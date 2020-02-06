@@ -1,7 +1,7 @@
 # Project exclude paths
 /venv/
 ../.idea/
-__pycache__/
+../../work/test.py
 /my_ignore/*
 
 # Byte-compiled / optimized / DLL files
